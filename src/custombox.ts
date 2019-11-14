@@ -66,7 +66,7 @@ namespace Custombox {
     static check(values: Array<string>, match: string): boolean {
       return values.indexOf(match) > -1;
     }
-    
+
     static isIE(): boolean {
       const ua = window.navigator.userAgent;
 
@@ -523,7 +523,7 @@ namespace Custombox {
         this.reference.parentNode.insertBefore(this.element.childNodes[0], this.reference.nextSibling);
         this.reference.parentNode.removeChild(this.reference);
       }
-      
+
       try {
         this.element.parentNode.removeChild(this.element);
       } catch (e) {}
@@ -753,4 +753,8 @@ namespace Custombox {
       }, true);
     }
   }
+}
+
+if (typeof(module) =='object' && typeof(module.exports) == 'object') {
+  module.exports = Custombox;
 }

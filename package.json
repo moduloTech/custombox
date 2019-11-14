@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/core-js": "^0.9.41",
     "@types/jasmine": "^2.5.38",
+    "@types/node": "^12.12.7",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-babel": "^7.0.0",
@@ -33,6 +34,7 @@
     "grunt-contrib-uglify": "^3.0.0",
     "grunt-fixpack": "^0.1.0",
     "jasmine-core": "^2.5.2",
+    "jsmin": "^1.0.1",
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
@@ -70,6 +72,7 @@
     "start": "grunt browserSync",
     "test": "npm run lint && karma start karma.conf.js --single-run",
     "tslint": "tslint",
-    "watch:test": "karma start karma.conf.js"
+    "watch:test": "karma start karma.conf.js",
+    "build": "tsc --outDir dist && jsmin -o dist/custombox.min.js dist/custombox.js"
   }
 }
